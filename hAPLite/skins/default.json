@@ -1,0 +1,366 @@
+{
+    'Quick Set': 0,
+    Terminal: 0,
+    Interfaces: {
+        'Interface List': 0,
+        'EoIP Tunnel': 0,
+        'IP Tunnel': 0,
+        'GRE Tunnel': 0,
+        VRRP: 0,
+        Bonding: 0,
+        LTE: 0,
+        name: 'Network Ports',
+        Ethernet: {
+            General: {
+                Name: { ro: true }
+            },
+            Enabled: { ro: true },
+            Comment: { ro: true }
+        },
+        'Detect Internet': 0
+    },
+    Bridge: {
+        'Port Extensions': 0,
+        Bridge: {
+            '&': { remove: 0 },
+            General: {
+                Name: { ro: true }
+            },
+            Enabled: { ro: true }
+        },
+        name: 'Network Bridge',
+        MSTIs: 0,
+        'Port MST Overrides': 0,
+        Filters: 0,
+        NAT: 0,
+        MDB: 0,
+        Ports: {
+            General: {
+                Interface: { ro: true }
+            }
+        }
+    },
+    Switch: 0,
+    Mesh: 0,
+    IP: {
+        Accounting: 0,
+        'DHCP Relay': 0,
+        'DHCP Server': {
+            DHCP: {
+                Script: { 'Lease Script': 0 },
+                Generic: {
+                    Name: { ro: true },
+                    Interface: { ro: true },
+                    Relay: { ro: true },
+                    'Address Pool': { ro: true }
+                },
+                Enabled: { ro: true },
+                '&': { remove: 0 }
+            },
+            'DHCP Setup': 0,
+            Options: 0,
+            'Option Sets': 0,
+            Networks: {
+                'No DNS': { ro: true },
+                undefined: { ro: true }
+            }
+        },
+        Firewall: {
+            'Filter Rules': 0,
+            Mangle: 0,
+            Raw: 0,
+            'Service Ports': 0,
+            'Layer7 Protocols': 0,
+            'Address Lists': {
+                '&': { remove: 0 },
+                Name: 0,
+                Enabled: { ro: true },
+                Comment: 0,
+                undefined: { ro: true }
+            },
+            name: 'IP Tables'
+        },
+        IPsec: 0,
+        Neighbors: 0,
+        SMB: 0,
+        SNMP: 0,
+        Services: 0,
+        Settings: {
+            'IP Settings': {
+                'IP Forward': { ro: true },
+                'Send Redirects': { ro: true },
+                'Accept Redirects': { ro: true },
+                'Secure Redirects': { ro: true },
+                'Accept Source Route': { ro: true },
+                'Allow Fast Path': { ro: true },
+                'Route Cache': { ro: true }
+            }
+        },
+        Socks: 0,
+        TFTP: 0,
+        name: 'Network IPv4',
+        Addresses: {
+            Address: {
+                '&': { set: 0, remove: 0 },
+                Address: { ro: true },
+                Network: { ro: true },
+                Interface: { ro: true },
+                Enabled: { ro: true },
+                Comment: 0,
+                undefined: { ro: true }
+            },
+            name: 'IP Addresses'
+        },
+        DNS: {
+            Settings: {
+                Servers: { ro: true },
+                'Use DoH Server': 0,
+                'Verify DoH Certificate': 0,
+                'Allow Remote Requests': { ro: true }
+            }
+        },
+        Hotspot: {
+            Servers: {
+                '&': { remove: 0 },
+                Name: { ro: true },
+                Interface: { ro: true },
+                'Address Pool': { ro: true },
+                Profile: { ro: true },
+                Enabled: 0,
+                'Keepalive Timeout': { ro: true },
+                'Login Timeout': { ro: true },
+                'Addresses Per MAC': { ro: 0 }
+            },
+            'Hotspot Setup': 0,
+            'Server Profiles': {
+                General: {
+                    Name: { ro: true },
+                    'Hotspot Address': { ro: true },
+                    'DNS Name': { ro: true },
+                    'HTML Directory': { ro: true },
+                    'HTML Directory Override': 0,
+                    'HTTP Proxy': 0,
+                    'HTTP Proxy Port': 0,
+                    'SMTP Server': 0
+                },
+                '&': { remove: 0 }
+            },
+            Users: {
+                undefined: { ro: true }
+            },
+            'User Profiles': {
+                Scripts: { 'On Login': 0, 'On Logout': 0, tab: 0 },
+                '&': { remove: 0 },
+                Advertise: {
+                    Advertise: { ro: true },
+                    'Advertise URL': { ro: true },
+                    'Advertise Interval': { ro: true },
+                    'Advertise Timeout': { ro: true }
+                },
+                General: {
+                    Name: { ro: 0 },
+                    'Address Pool': { ro: true }
+                },
+                Queue: {
+                    'Insert Queue Before': { ro: true }
+                }
+            },
+            'Service Ports': 0
+        },
+        Pool: {
+            Pools: {
+                '&': { remove: 0 },
+                Name: { ro: true },
+                Addresses: { ro: true },
+                undefined: { ro: true },
+                'Next Pool': { ro: true }
+            },
+            name: 'IP Pool'
+        },
+        Packing: 0,
+        Cloud: 0,
+        Routes: { VRF: 0 },
+        'Kid Control': { name: 'Device Control' }
+    },
+    MPLS: 0,
+    Routing: 0,
+    System: {
+        'Auto Upgrade': 0,
+        Console: 0,
+        History: 0,
+        Identity: 0,
+        LEDs: 0,
+        License: 0,
+        Logging: 0,
+        Note: 0,
+        Password: 0,
+        Ports: 0,
+        Scheduler: 0,
+        Scripts: 0,
+        'Special Login': 0,
+        Users: 0,
+        name: 'Control Panel',
+        Certificates: 0,
+        Disks: 0,
+        Packages: {
+            Packages: {
+                Enabled: 0,
+                Disable: 0,
+                Uninstall: 0,
+                Unschedule: 0,
+                Downgrade: 0
+            },
+            name: 'rOS FW Update'
+        },
+        'Reset Configuration': {
+            'Reset Configuration': {
+                'Keep User Configuration': { ro: true },
+                'CAPS Mode': { ro: true },
+                'Do Not Backup': 0,
+                'Run After Reset': 0
+            },
+            name: 'Factory Def Setup'
+        },
+        RouterBOARD: { Settings: 0, name: 'Sys Info', 'Mode Button': 0, 'Reset Button': 0 },
+        Clock: {
+            Clock: {
+                'Manual Time Zone': {
+                    'DST Delta': 0,
+                    'DST Start': 0,
+                    'DST End': 0,
+                    'Time Zone': { ro: true }
+                },
+                Time: {
+                    'Time Zone Autodetect': { ro: true },
+                    'Time Zone Name': { ro: true },
+                    'DST Active': 0
+                }
+            }
+        },
+        'NTP Client': {
+            'NTP Client': {
+                Mode: { ro: true },
+                'Primary NTP Server': { ro: true },
+                'Secondary NTP Server': { ro: true },
+                'Dynamic Servers': { ro: true }
+            }
+        }
+    },
+    Queues: {
+        'Interface Queues': {
+            'Queue Type': { ro: true },
+            name: 'HW QoS'
+        },
+        'Queue Tree': {
+            General: {
+                Parent: { ro: true },
+                'Queue Type': { ro: true },
+                Name: { ro: true },
+                'Packet Marks': { ro: true },
+                'Bucket Size': 0
+            },
+            undefined: { ro: true },
+            '&': { remove: 0 },
+            name: 'Global QoS'
+        },
+        'Queue Types': {
+            '&': { remove: 0 },
+            'Type Name': { ro: true },
+            Kind: { ro: true },
+            'PFIFO Queue Size': 0,
+            Rate: 0,
+            'Queue Size': 0,
+            'Total Queue Size': 0,
+            'Src. Address Mask': { ro: true },
+            'Dst. Address Mask': { ro: true },
+            'Src. Address6 Mask': { ro: true },
+            'Dst. Address6 Mask': { ro: true },
+            name: 'QoS Definition'
+        },
+        name: 'QoS Central',
+        'Simple Queues': {
+            undefined: { ro: true },
+            name: 'Device QoS',
+            Advanced: {
+                'Packet Marks': 0,
+                'Queue Type': { ro: true },
+                Parent: { ro: true }
+            },
+            Statistics: {
+                'PCQ Queues': { ro: true }
+            },
+            Total: {
+                'Total Queue Type': { ro: true }
+            },
+            Comment: { ro: true }
+        }
+    },
+    'Dot1X': 0,
+    Files: 0,
+    Log: {
+        Log: { Buffer: 0 },
+        name: 'SysLog'
+    },
+    Tools: {
+        Email: 0,
+        'Flood Ping': 0,
+        Graphing: 0,
+        'IP Scan': 0,
+        'MAC Server': 0,
+        'Packet Sniffer': 0,
+        Profile: 0,
+        RoMON: 0,
+        SMS: 0,
+        Telnet: 0,
+        Netwatch: 0,
+        'Traffic Generator': 0,
+        'Traffic Monitor': 0,
+        WoL: 0
+    },
+    Partition: 0,
+    'Make Supout.rif': 0,
+    Undo: 0,
+    Redo: 0,
+    'Hide Passwords': 0,
+    WinBox: 0,
+    Graphs: 0,
+    PPP: {
+        Profiles: {
+            Scripts: { 'On Up': 0, 'On Down': 0, tab: 0 },
+            Comment: { ro: true },
+            undefined: 0
+        },
+        name: 'Network Tunnels'
+    },
+    'Safe Mode': 0,
+    RADIUS: { name: 'RADIUS Authentication' },
+    Status: {
+        Status: {
+            '0': { alias: 'System:Identity:Identity:Identity', name: 'WebFig OEM Details:' },
+            '1': { alias: 'IP:Cloud:Cloud:DNS Name', separator: 1, name: 'Cloud DNS Name' },
+            '3': { alias: 'System:Clock:Clock:Time:Time' },
+            '4': { alias: 'System:Clock:Clock:Time:Date' },
+            '5': { alias: 'System:RouterBOARD:RouterBOARD:Model', separator: 1, name: ' Device Model' },
+            '6': { alias: 'System:RouterBOARD:RouterBOARD:Serial Number', separator: 1 },
+            '7': { alias: 'System:Resources:Resources:Version', separator: 1, name: 'Firmware Version' },
+            '8': { alias: 'System:Resources:Resources:Uptime', separator: 1, name: 'Device Uptime' },
+            '9': { alias: 'System:Resources:Resources:CPU Load', separator: 1 },
+            '10': { alias: 'System:License:License:Level', name: 'License Level' },
+            '11': { alias: 'IP:DNS:Settings:Servers', name: 'UpStream DNS', separator: 1 },
+            '12': { alias: 'IP:Hotspot:Server Profiles:*1:General:Hotspot Address', separator: 1 },
+            '13': { alias: 'IP:Addresses:Address:*10:Address', name: 'WAN Static IP:', separator: 1 },
+            '14': { alias: 'IP:DHCP Client:DHCP Client:*1:Status:IP Address', name: 'DHCP WAN IP:' }
+        },
+        name: 'WebFigOEMv2.fw'
+    },
+    WebFig: { name: 'WebFigOEMv2FW' },
+    CAPsMAN: 0,
+    Wireless: {
+        'W60G Station': 0,
+        name: 'Wireless Network',
+        'Nstreme Dual': 0,
+        'Access List': 0,
+        Registration: 0,
+        Channels: 0
+    }
+}
