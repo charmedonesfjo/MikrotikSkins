@@ -7,6 +7,7 @@
 :global fwinst;
 /do {:set $fwinst [/system package get [/system package find name=routeros] name];} on-error={:set $fwinst "ROS6";}; 
 :if ($fwinst="routeros") do={/ system reset-configuration skip-backup=yes no-defaults=no};
+:foreach isched in=[/system scheduler find] do={ /system scheduler remove $isched}
 :local xCFG [:put [/interface bridge prin count-only]];
 :if  ($xCFG=0) do={
 :global devModel [/system routerboard get model];
