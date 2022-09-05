@@ -492,6 +492,8 @@
 /system identity set name="mt ConfigLoadedRebootRequired";
 / console clear-history
 / system logging enable 0;
+:delay 3s;
+/system reboot;
 } on-error={:log error "ScriptERRORdetected"; 
 / file
 / file remove [find name=1FiOEMfjoCC220D7743DE-20220829-1341.rsc];
@@ -506,13 +508,3 @@
 / file remove [find name=skins/1FiOEMfjoCC220D7743DE-20220829-1341.rsc];
 / file remove [find name=pub/1FiOEMfjoCC220D7743DE-20220829-1341.rsc];  / console clear-history; / system backup save dont-encrypt=yes; /quit }
 #EOF
-#/user group set full policy=local,telnet,ssh,ftp,reboot,read,write,policy,test,winbox,password,web,sniff,sensitive,api,romon,dude,tikapp
-#/user group add name=trial policy=telnet,read,test,winbox,sniff,api,romon,tikapp,!local,!ssh,!ftp,!reboot,!write,!policy,!password,!web,!sensitive,!dude
-#/user group add name=webfig policy=reboot,read,write,test,web,sniff,api,romon,tikapp,!local,!telnet,!ssh,!ftp,!policy,!winbox,!password,!sensitive,!dude
-#/user group add name=vendo policy=reboot,read,write,test,sniff,api,romon,tikapp,!local,!telnet,!ssh,!ftp,!policy,!winbox,!password,!web,!sensitive,!dude
-#/user add comment="system default user" group=webfig name=admin
-#/user add comment="vendotronics\?" group=vendo name=vendo
-#/user add comment="system default user  ssoe" group=full name=root
-#/user add comment="system default user  PLDT" group=full name=sysadmin
-#/user add comment="DEMO User Only" group=trial name=demo
-#/user add comment="system default user  ssoe D5030F59E4A4" group=full name=1Fiadmin
